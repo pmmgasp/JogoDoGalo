@@ -2,14 +2,13 @@ const settings = require('./config.json');
 const Pool = require('pg').Pool;
 
 const pool = new Pool({
-    user: process.env.PGUSER || settings.PostgreSQL.user,
-    host: process.env.PGHOST || settings.PostgreSQL.host,
-    database: process.env.PGDATABASE || settings.PostgreSQL.database,
-    password: process.env.PGPASSWORD || settings.PostgreSQL.password,
-    port: process.env.PGPORT || settings.PostgreSQL.port,
+    user: settings.PostgreSQL.user || process.env.PGUSER,
+    host: settings.PostgreSQL.host || process.env.PGHOST,
+    database: settings.PostgreSQL.database || process.env.PGDATABASE,
+    password: settings.PostgreSQL.password || process.env.PGPASSWORD,
+    port: settings.PostgreSQL.port || process.env.PGPORT,
     ssl: { rejectUnauthorized: false },
 })
 
-
-
 module.exports = pool;
+

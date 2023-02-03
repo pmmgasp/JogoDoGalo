@@ -1,10 +1,10 @@
 {
     "PostgreSQL":
         {
-            "user": "user",
-            "host": "localhost",
-            "database": "projeto",
-            "password": "password",
-            "port": "9090"
+            "user": "postgres",
+            "host": "containers-us-west-79.railway.app",
+            "database": "railway",
+            "password": "hB0AO9BWOfd8MroFlyeT",
+            "port": "6495"
         }
 }

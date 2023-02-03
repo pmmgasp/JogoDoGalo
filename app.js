@@ -18,5 +18,5 @@ app.use(function(req, res, next) {
 routeUtils.mountRoutes(app, "./routes/");
 
 // listen for requests
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 9090;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
