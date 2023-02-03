@@ -9,7 +9,7 @@ const login = (req, res) => {
             res.status(200).json("O nome de utilizador ou palavra-passe está incorreto");
         } else {
             if (body.password === results.rows[0].password) {
-                res.status(200).json(`${results.rows[0].id};${results.rows[0].role}`);
+                res.status(200).json(`${results.rows[0].id};${results.rows[0].img}`);
             } else {
                 res.status(200).json("O nome de utilizador ou palavra-passe está incorreto");
             }
