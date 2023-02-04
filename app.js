@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const authRouter = require("./routes/auth");
 const usersRouter = require("./routes/users");
-const healthRouter = require("./routes/health");
 
 // express app
 const app = express();
@@ -13,7 +12,6 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/users", usersRouter);
-app.use("/health", healthRouter);
 
 // listen for requests
 const PORT = process.env.PORT || 5000;
