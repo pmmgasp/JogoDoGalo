@@ -3,7 +3,7 @@ const pool = require("../db")
 const login = (req, res) => {
     let body = req.body;
     
-    pool.query(`SELECT * FROM users WHERE username='${body.username}';`).then(results => {
+    pool.query(`SELECT * FROM users WHERE name='${body.username}';`).then(results => {
         //console.log(results.rows)
         if (results.rowCount === 0) {
             res.status(200).json("O nome de utilizador ou palavra-passe está incorreto");
