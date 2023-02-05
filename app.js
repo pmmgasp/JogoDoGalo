@@ -8,7 +8,7 @@ const app = express();
 
 // configure express to use json as middle-ware
 app.use(cors());
-app.use(express.json({limit: '200mb'}));
+app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/users", usersRouter);
